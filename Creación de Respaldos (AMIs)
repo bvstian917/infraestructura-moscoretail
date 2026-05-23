@@ -1,0 +1,5 @@
+# AMI de la instancia Linux
+aws ec2 create-image --instance-id i-linuxxxxxxx --name "Backup-Linux-Mosco" --no-reboot
+
+# AMI de la instancia Windows
+aws ec2 create-image --instance-id i-windowsxxxxxx --name "Backup-Windows-Mosco" --no-reboot
