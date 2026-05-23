@@ -1,0 +1,11 @@
+# Crear el Grupo de Seguridad
+aws ec2 create-security-group --group-name sg-moscoretail --description "Firewall MoscoRetail" --vpc-id vpc-xxxxxx
+
+# Habilitar Puerto 22 (SSH para Linux)
+aws ec2 authorize-security-group-ingress --group-id sg-xxxxxx --protocol tcp --port 22 --cidr 0.0.0.0/0
+
+# Habilitar Puerto 3389 (RDP para Windows)
+aws ec2 authorize-security-group-ingress --group-id sg-xxxxxx --protocol tcp --port 3389 --cidr 0.0.0.0/0
+
+# Habilitar Puerto 80 (HTTP para el Balanceador)
+aws ec2 authorize-security-group-ingress --group-id sg-xxxxxx --protocol tcp --port 80 --cidr 0.0.0.0/0
