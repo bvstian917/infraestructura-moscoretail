@@ -1,0 +1,5 @@
+# Lanzar Servidor Linux en Subred Privada A
+aws ec2 run-instances --image-id ami-01189924501bc550d --count 1 --instance-type t2.micro --key-name vockey --security-group-ids sg-xxxxxx --subnet-id subnet-privadaA --iam-instance-profile Name=LabInstanceProfile
+
+# Lanzar Servidor Windows en Subred Privada B
+aws ec2 run-instances --image-id ami-0fc5d935ebf8bc3bc --count 1 --instance-type t2.micro --key-name vockey --security-group-ids sg-xxxxxx --subnet-id subnet-privadaB --iam-instance-profile Name=LabInstanceProfile
